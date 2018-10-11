@@ -14,6 +14,12 @@ class CreateFlightCustomer extends Migration
     public function up()
     {
         //
+        Schema::create('flight_customer', function (Blueprint $table){
+            $table->increments('id');
+            $table->integer('flight_id');
+            $table->integer('customer_id');
+
+        });
     }
 
     /**
@@ -24,5 +30,6 @@ class CreateFlightCustomer extends Migration
     public function down()
     {
         //
+        Schema::dropIfExists('flight_customer');
     }
 }
