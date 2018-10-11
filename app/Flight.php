@@ -16,6 +16,6 @@ class Flight extends Model
     }
 
     public function passengers(){
-    	return $this->belingsToMany('App\Customer', 'flight_customer');
+    	return $this->belongsToMany('App\Customer', 'flight_customer');
     }
 }

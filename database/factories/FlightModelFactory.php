@@ -1,10 +1,12 @@
 <?php
 
-$factory->define(App\Airport::class function (Faker\Generator $faker) {
+// use Faker\Generator as Faker;
+
+$factory->define(App\Airport::class, function (Faker\Generator $faker) {
 	return [
-		'iataCode' => str_random(3);
+		'iataCode' => str_random(3),
 		'city' => $faker->city,
-		'state' => $faker->stateAbbr
+		'states' => $faker->stateAbbr
 	];
 });
 
